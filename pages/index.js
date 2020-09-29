@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-
 import { Table, Card, Button, Input, Tag, Modal, Row, Col, Select } from "antd";
 import { AudioOutlined } from "@ant-design/icons";
 
@@ -36,6 +35,7 @@ const Home = () => {
 
   useEffect(() => {
     let localData = localStorage.getItem("studentsInfo");
+
     setData(JSON.parse(localData));
   }, []);
 

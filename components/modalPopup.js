@@ -26,19 +26,15 @@ const ModalPopup = () => {
       visible={isVisible}
       onOk={() => {
         setData([...data, { key: Date.now(), name, age, address, gender }]);
+
         localStorage.setItem(
           "studentsInfo",
           JSON.stringify([
             ...data,
-            {
-              key: Date.now(),
-              name,
-              age,
-              address,
-              gender,
-            },
+            { key: Date.now(), name, age, address, gender },
           ])
         );
+
         setIsVisible(false);
         setName("");
         setAddress("");
