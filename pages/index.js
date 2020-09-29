@@ -35,8 +35,9 @@ const Home = () => {
 
   useEffect(() => {
     let localData = localStorage.getItem("studentsInfo");
-
-    setData(JSON.parse(localData));
+    if (localData) {
+      setData(JSON.parse(localData));
+    }
   }, []);
 
   return (
